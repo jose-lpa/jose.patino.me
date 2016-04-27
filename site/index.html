@@ -36,11 +36,12 @@
           <div ng-controller="ContentController as content">
             <div class="masthead clearfix">
               <div class="inner">
-                <h3 class="masthead-brand">Software Engineer</h3>
+                <h3 class="masthead-brand" ng-show="content.isSelected(1)">Software Engineer</h3>
+                <h3 class="masthead-brand" ng-hide="content.isSelected(1)">Jos&eacute; Luis Pati&ntilde;o Andr&eacute;s</h3>
                 <nav>
                   <ul class="nav masthead-nav">
                     <li ng-class="{ active:content.isSelected(1) }"><a href ng-click="content.selectPanel(1)">Home</a></li>
-                    <li ng-class="{ active:content.isSelected(2) }"><a href ng-click="content.selectPanel(2)">Features</a></li>
+                    <li ng-class="{ active:content.isSelected(2) }"><a href ng-click="content.selectPanel(2)">Development</a></li>
                     <li ng-class="{ active:content.isSelected(3) }"><a href ng-click="content.selectPanel(3)">Contact</a></li>
                   </ul>
                 </nav>
@@ -49,24 +50,62 @@
 
             <div class="content" ng-show="content.isSelected(1)">
               <div class="inner cover ">
-              <h1 class="cover-heading">Jos&eacute; Luis Pati&ntilde;o Andr&eacute;s</h1>
-              <p class="lead">Developer. Pythonista. Misplaced spaniard.</p>
-              <!--<p class="lead">
-                <a href="#" class="btn btn-lg btn-default">Learn more</a>
-              </p>-->
+                <h1 class="cover-heading">Jos&eacute; Luis Pati&ntilde;o Andr&eacute;s</h1>
+                <p class="lead">Developer. Pythonista. Misplaced spaniard.</p>
               </div>
             </div>
 
             <div class="content" ng-show="content.isSelected(2)">
               <div class="inner cover ">
-              <h1>Jose</h1>
-            </div>
+                <h1>Technologies</h1>
+
+                <div class="lead">
+                  <p>Some of the technologies, frameworks and languages I daily use or I have worked with.</p>
+                
+                  <div class="row">
+                    <div class="col-md-4"><a href="https://www.python.org/" target="_blank"><i class="fa fa-terminal fa-lg" aria-hidden="true"></i> Python</a></div>
+                    <div class="col-md-4"><a href="https://www.djangoproject.com/" target="_blank"><i class="fa fa-cogs fa-lg" aria-hidden="true"></i> Django</a></div>
+                    <div class="col-md-4"><a href="https://www.javascript.com/" target="_blank"><i class="fa fa-terminal fa-lg" aria-hidden="true"></i> JavaScript</a></div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-md-4"><a href="https://angularjs.org/" target="_blank"><i class="fa fa-cogs fa-lg" aria-hidden="true"></i> AngularJS</a></div>
+                    <div class="col-md-4"><a href="http://jquery.com/" target="_blank"><i class="fa fa-cogs fa-lg" aria-hidden="true"></i> jQuery</a></div>
+                    <div class="col-md-4"><a href="https://www.w3.org/TR/html5/" target="_blank"><i class="fa fa-html5 fa-lg" aria-hidden="true"></i> HTML5</a></div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-md-4"><a href="http://www.postgresql.org/" target="_blank"><i class="fa fa-database fa-lg" aria-hidden="true"></i> PostgreSQL</a></div>
+                    <div class="col-md-4"><a href="https://www.mysql.com/" target="_blank"><i class="fa fa-database fa-lg" aria-hidden="true"></i> MySQL</a></div>
+                    <div class="col-md-4"><a href="http://redis.io/" target="_blank"><i class="fa fa-database fa-lg" aria-hidden="true"></i> Redis</a></div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-4"><a href="https://www.vagrantup.com/" target="_blank"><i class="fa fa-wrench fa-lg" aria-hidden="true"></i> Vagrant</a></div>
+                    <div class="col-md-4"><a href="http://www.docker.com/" target="_blank"><i class="fa fa-th-large fa-lg" aria-hidden="true"></i> Docker</a></div>
+                    <div class="col-md-4"><a href="https://www.ansible.com/" target="_blank"><i class="fa fa-server fa-lg" aria-hidden="true"></i> Ansible</a></div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-4"><a href="https://git-scm.com/" target="_blank"><i class="fa fa-git fa-lg" aria-hidden="true"></i> Git</a></div>
+                    <div class="col-md-4"><a href="https://www.mercurial-scm.org/" target="_blank"><i class="fa fa-code-fork fa-lg" aria-hidden="true"></i> Mercurial</a></div>
+                    <div class="col-md-4"><a href="https://subversion.apache.org/" target="_blank"><i class="fa fa-code-fork fa-lg" aria-hidden="true"></i> Subversion</a></div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-4"><a href="https://www.debian.org/" target="_blank"><i class="fa fa-linux fa-lg" aria-hidden="true"></i> Debian GNU/Linux</a></div>
+                    <div class="col-md-4"><a href="https://www.apple.com/osx/" target="_blank"><i class="fa fa-apple fa-lg" aria-hidden="true"></i> MacOS</a></div>
+                    <div class="col-md-4"><a href ng-click="content.selectPanel(3)">And a lot more...</a></div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="content" ng-show="content.isSelected(3)">
               <div class="inner cover ">
-              <h1>Luis</h1>
-            </div>
+                <h1>Contact</h1>
+                <p class="lead">If there is something you want to tell me, please drop me an <a href="mailto:jose.lpa@gmail.com" target="_top">email</a>.</p>
+              </div>
             </div>
           </div>
 

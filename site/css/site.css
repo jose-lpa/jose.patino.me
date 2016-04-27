@@ -64,10 +64,16 @@ body h3 {
   padding: 30px;
 }
 .social-link {
-  padding: 0 10px 0 10px;
+  padding: 0 25px 0 25px;
 }
 .social-link a {
   text-decoration: none;
+}
+.row {
+  padding: 25px 0 25px 0;
+}
+.col-md-4 {
+  padding: 10px 0 10px 0;
 }
 
 
@@ -128,7 +134,14 @@ body h3 {
   padding: 10px 20px;
   font-weight: bold;
 }
-
+.content a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #000000;
+}
+.content a:hover {
+  color: #FFFFFF;
+}
 
 /*
  * Footer
