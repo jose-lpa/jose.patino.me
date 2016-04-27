@@ -33,11 +33,12 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-body {
   color: #000000;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+body h3 {
+  color: #FFF;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -64,6 +65,9 @@ body {
 }
 .social-link {
   padding: 0 10px 0 10px;
+}
+.social-link a {
+  text-decoration: none;
 }
 
 
