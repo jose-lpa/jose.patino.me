@@ -5,6 +5,7 @@
   "homepage": "https://bitbucket.org/jose_lpa/jose.patino.me",
   "private": true,
   "dependencies": {
+    "angular": "1.5.5",
     "bootstrap": "3.3.6",
     "font-awesome": "4.6.1"
   }
