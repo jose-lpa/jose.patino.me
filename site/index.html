@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="site">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <meta name="description" content="Software Engineer - Full Stack Developer">
+    <meta name="keywords" content="Python,Javascript,Web Development,Software,Web Applications,Programming,Engineer">
+    <meta name="author" content="Jose Luis Patino Andres">
+    <link rel="icon" href="images/favicon.ico">
 
     <title>Jos&eacute; Luis Pati&ntilde;o Andr&eacute;s</title>
 
@@ -31,51 +32,61 @@
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
-          <div class="masthead clearfix">
-            <div class="inner">
-              <h3 class="masthead-brand">Software Engineer</h3>
-              <nav>
-                <ul class="nav masthead-nav">
-                  <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Features</a></li>
-                  <li><a href="#">Contact</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
 
-          <div class="inner cover">
-            <h1 class="cover-heading">Jos&eacute; Luis Pati&ntilde;o Andr&eacute;s</h1>
-            <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-            <p class="lead">
-              <a href="#" class="btn btn-lg btn-default">Learn more</a>
-            </p>
+          <div ng-controller="ContentController as content">
+            <div class="masthead clearfix">
+              <div class="inner">
+                <h3 class="masthead-brand">Software Engineer</h3>
+                <nav>
+                  <ul class="nav masthead-nav">
+                    <li ng-class="{ active:content.isSelected(1) }"><a href ng-click="content.selectPanel(1)">Home</a></li>
+                    <li ng-class="{ active:content.isSelected(2) }"><a href ng-click="content.selectPanel(2)">Features</a></li>
+                    <li ng-class="{ active:content.isSelected(3) }"><a href ng-click="content.selectPanel(3)">Contact</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+
+            <div class="content" ng-show="content.isSelected(1)">
+              <div class="inner cover ">
+              <h1 class="cover-heading">Jos&eacute; Luis Pati&ntilde;o Andr&eacute;s</h1>
+              <p class="lead">Developer. Pythonista. Misplaced spaniard.</p>
+              <!--<p class="lead">
+                <a href="#" class="btn btn-lg btn-default">Learn more</a>
+              </p>-->
+              </div>
+            </div>
+
+            <div class="content" ng-show="content.isSelected(2)">
+              <div class="inner cover ">
+              <h1>Jose</h1>
+            </div>
+            </div>
+
+            <div class="content" ng-show="content.isSelected(3)">
+              <div class="inner cover ">
+              <h1>Luis</h1>
+            </div>
+            </div>
           </div>
 
           <div class="mastfoot">
             <div class="inner">
               <p>
-                <span class="social-link"><a href="https://github.com/jose-lpa"><i class="fa fa-github fa-lg" aria-hidden="true"></i> Github</a></span> &middot; 
-                <span class="social-link"><a href="https://bitbucket.org/jose_lpa/"><i class="fa fa-bitbucket fa-lg" aria-hidden="true"></i> Bitbucket</a></span> &middot; 
-                <span class="social-link"><a href="http://stackoverflow.com/users/515093/"><i class="fa fa-stack-overflow fa-lg" aria-hidden="true"></i> StackOverflow</a></span> &middot; 
-                <span class="social-link"><a href="https://twitter.com/jose_lpa"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i> Twitter</a>
+                <span class="social-link"><a href="https://github.com/jose-lpa" target="_blank"><i class="fa fa-github fa-lg" aria-hidden="true"></i> Github</a></span> &middot; 
+                <span class="social-link"><a href="https://bitbucket.org/jose_lpa/" target="_blank"><i class="fa fa-bitbucket fa-lg" aria-hidden="true"></i> Bitbucket</a></span> &middot; 
+                <span class="social-link"><a href="http://stackoverflow.com/users/515093/" target="_blank"><i class="fa fa-stack-overflow fa-lg" aria-hidden="true"></i> StackOverflow</a></span> &middot; 
+                <span class="social-link"><a href="https://twitter.com/jose_lpa" target="_blank"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i> Twitter</a>
               </p>
             </div>
           </div>
-
         </div>
-
       </div>
-
     </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="js/site.js"></script>
   </body>
 </html>
